@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity">
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_greeting"-->
+<!--        style="@style/TitlePrimaryStyle"-->
+<!--        android:layout_marginStart="@dimen/dimen_large"-->
+<!--        android:layout_marginTop="@dimen/dimen_medium"-->
+<!--        android:text="@string/good_morning"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_settings"-->
+<!--        style="@style/IconPrimaryStyle"-->
+<!--        android:layout_marginTop="@dimen/dimen_medium"-->
+<!--        android:layout_marginEnd="@dimen/dimen_large"-->
+<!--        android:contentDescription="@string/settings"-->
+<!--        android:src="@drawable/ic_setting_24"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

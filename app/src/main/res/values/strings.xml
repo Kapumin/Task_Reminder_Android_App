@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Task Reminder</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="settings">Settings</string>
+</resources>
