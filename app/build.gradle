@@ -54,11 +54,10 @@ dependencies {
     //Androidx KTX extensions
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.4.1"
+    implementation "androidx.activity:activity-ktx:1.4.0"
 
     //Glide
     implementation 'com.github.bumptech.glide:glide:3.8.0'
-
-    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
 
     //dagger
     implementation("com.google.dagger:hilt-android:2.39.1")

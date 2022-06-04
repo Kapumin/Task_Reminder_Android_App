@@ -22,8 +22,27 @@
         android:layout_marginEnd="@dimen/dimen_x_large"
         android:contentDescription="@string/settings"
         android:src="@drawable/ic_setting_24"
-        app:layout_constraintTop_toTopOf="@+id/tv_greeting"
         app:layout_constraintBottom_toBottomOf="@id/tv_greeting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_greeting" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_large"
+        android:layout_marginBottom="@dimen/dimen_medium"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
+
+    <ImageView
+        android:id="@+id/iv_add_task"
+        style="@style/FloatingCircleButtonStyle"
+        android:layout_marginEnd="@dimen/dimen_xx_large"
+        android:layout_marginBottom="@dimen/dimen_xxx_large"
+        android:contentDescription="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

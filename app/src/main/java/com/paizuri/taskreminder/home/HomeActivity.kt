@@ -1,17 +1,30 @@
 package com.paizuri.taskreminder.home
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.paizuri.taskreminder.R
+import androidx.activity.viewModels
+import com.paizuri.taskreminder.common.base_classes.BaseActivity
 import com.paizuri.taskreminder.databinding.ActivityHomeBinding
+import com.paizuri.taskreminder.extensions.setOnClick
+import com.paizuri.taskreminder.task_editor.TaskEditorActivity
+import dagger.hilt.android.AndroidEntryPoint
 
-class HomeActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class HomeActivity : BaseActivity() {
 
     private lateinit var binding: ActivityHomeBinding
+
+    private val homeActivityViewModel: HomeActivityViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setClickListeners()
+    }
+
+    private fun setClickListeners() {
+        binding.ivAddTask.setOnClick {
+            TaskEditorActivity.start(this)
+        }
     }
 }

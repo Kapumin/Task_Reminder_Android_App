@@ -6,4 +6,13 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:tint">@color/primary_icon_color</item>
     </style>
+
+    <style name="FloatingCircleButtonStyle">
+        <item name="android:layout_width">@dimen/floating_add_button_width</item>
+        <item name="android:layout_height">@dimen/floating_add_button_height</item>
+        <item name="android:background">@drawable/circle_selector</item>
+        <item name="android:src">@drawable/ic_add_rounded_24</item>
+        <item name="android:tint">@color/primary_icon_color</item>
+        <item name="android:padding">@dimen/dimen_small</item>
+    </style>
 </resources>
