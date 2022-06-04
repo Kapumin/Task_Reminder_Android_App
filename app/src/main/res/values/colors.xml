@@ -12,11 +12,11 @@
     <!-- app colors  -->
     <color name="primary_color">#DFFFFF</color>
     <color name="primary_variant_color">#DFFFFF</color>
-    <color name="primary_on_color">#FFFFFFFFF</color>
+    <color name="primary_on_color">#FFFFFFFF</color>
 
-    <color name="secondary_color">#DFFFFF</color>
-    <color name="secondary_variant_color">#DFFFFF</color>
-    <color name="secondary_on_color">#FF000000</color>
+    <color name="secondary_color">#181818</color>
+    <color name="secondary_variant_color">#444444</color>
+    <color name="secondary_on_color">#6F6F6F</color>
 
     <color name="accent_color">#E76A1C</color>
     <color name="window_color">#111111</color>
