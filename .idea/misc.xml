@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/abhij/AndroidStudioProjects/Task_Reminder_Android_App/app/src/main/res/drawable/ic_add_24.xml" value="0.1" />
+        <entry key="..\:/Users/abhij/AndroidStudioProjects/Task_Reminder_Android_App/app/src/main/res/drawable/ic_setting_24.xml" value="0.1" />
+        <entry key="..\:/Users/abhij/AndroidStudioProjects/Task_Reminder_Android_App/app/src/main/res/layout/activity_home.xml" value="0.2222222222222222" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.2908888075086807" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.359375" />
       </map>
