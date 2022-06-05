@@ -2,29 +2,69 @@ package com.paizuri.taskreminder.home
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import com.paizuri.taskreminder.common.adapters.HomeTaskListAdapter
 import com.paizuri.taskreminder.common.base_classes.BaseActivity
+import com.paizuri.taskreminder.common.entities.Task
+import com.paizuri.taskreminder.common.extensions.showToast
 import com.paizuri.taskreminder.databinding.ActivityHomeBinding
 import com.paizuri.taskreminder.extensions.setOnClick
 import com.paizuri.taskreminder.task_editor.TaskEditorActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeActivity : BaseActivity() {
+class HomeActivity : BaseActivity(), HomeTaskListAdapter.TaskClickListener {
 
     private lateinit var binding: ActivityHomeBinding
 
     private val homeActivityViewModel: HomeActivityViewModel by viewModels()
 
+    private lateinit var adapter: HomeTaskListAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setObservers()
+        setupRecyclerView()
+        observeData()
         setClickListeners()
+    }
+
+    private fun setObservers() {
+        homeActivityViewModel.getAllTasks()
+    }
+
+    private fun observeData() {
+        homeActivityViewModel.tasksList.observe(this) { tasks ->
+            if (tasks.isEmpty()) {
+                showToast("No Tasks")
+            } else {
+                adapter.updateDataset(tasks)
+                adapter.notifyItemRangeChanged(0, tasks.size)
+            }
+        }
+    }
+
+    private fun setupRecyclerView() {
+        adapter = HomeTaskListAdapter()
+        adapter.updateDataset(mutableListOf())
+        adapter.setItemClickListener(this)
+        binding.rvTaskList.adapter = adapter
     }
 
     private fun setClickListeners() {
         binding.ivAddTask.setOnClick {
             TaskEditorActivity.start(this)
         }
+    }
+
+    override fun onResume() {
+        homeActivityViewModel.getAllTasks()
+        super.onResume()
+    }
+
+    override fun onTaskClicked(task: Task) {
+        TaskEditorActivity.start(this, true)
+        TaskEditorActivity.clickedTask(task)
     }
 }

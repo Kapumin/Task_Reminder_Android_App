@@ -18,11 +18,11 @@
     <color name="secondary_variant_color">#444444</color>
     <color name="secondary_on_color">#6F6F6F</color>
 
-    <color name="accent_color">#E76A1C</color>
+    <color name="accent_color">#079D52</color>
     <color name="window_color">#111111</color>
     <color name="status_bar_color">#111111</color>
 
-    <color name="navigation_bar_color">#2D2D2D</color>
+    <color name="navigation_bar_color">#111111</color>
 
     <color name="primary_title_color">#FFFFFFFF</color>
     <color name="secondary_title_color">#D6D6D6</color>
@@ -32,6 +32,7 @@
     <color name="primary_icon_color">#D9CCCC</color>
     <color name="secondary_icon_color">#9F9393</color>
 
-    <color name="edit_text_background_color">#17555555</color>
+    <color name="edit_text_background_color">#17929292</color>
+    <color name="item_task_background_color">#1C5F5F5F</color>
 
 </resources>

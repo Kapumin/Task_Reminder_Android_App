@@ -1,4 +1,4 @@
-package com.paizuri.taskreminder.entities
+package com.paizuri.taskreminder.common.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "tasks")
 data class Task(
-    @PrimaryKey val taskId: Int,
-    @ColumnInfo val taskTitle: String,
-    @ColumnInfo val taskDescription: String
+    @PrimaryKey(autoGenerate = true) var taskId: Int? = null,
+    @ColumnInfo var taskTitle: String,
+    @ColumnInfo var taskDescription: String
 )

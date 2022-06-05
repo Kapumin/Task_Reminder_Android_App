@@ -1,7 +1,7 @@
 package com.paizuri.taskreminder.dao
 
 import androidx.room.*
-import com.paizuri.taskreminder.entities.Task
+import com.paizuri.taskreminder.common.entities.Task
 
 @Dao
 interface TaskDao {
@@ -9,7 +9,7 @@ interface TaskDao {
     @Query("SELECT * from tasks")
     fun getAllTasks(): List<Task>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertTask(task: Task)
 
     @Update

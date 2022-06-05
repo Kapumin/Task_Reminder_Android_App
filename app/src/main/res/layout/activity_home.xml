@@ -10,7 +10,7 @@
         android:id="@+id/tv_greeting"
         style="@style/TitlePrimaryStyle"
         android:layout_marginStart="@dimen/dimen_x_large"
-        android:layout_marginTop="@dimen/dimen_medium_x_large"
+        android:layout_marginTop="@dimen/dimen_xxx_large"
         android:text="@string/good_morning"
         android:textSize="@dimen/greetings_text_size"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,11 +27,13 @@
         app:layout_constraintTop_toTopOf="@+id/tv_greeting" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_task_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dimen_large"
+        android:layout_marginTop="@dimen/dimen_xxx_large"
         android:layout_marginBottom="@dimen/dimen_medium"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        android:overScrollMode="never"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
@@ -39,8 +41,8 @@
     <ImageView
         android:id="@+id/iv_add_task"
         style="@style/FloatingCircleButtonStyle"
-        android:layout_marginEnd="@dimen/dimen_xx_large"
-        android:layout_marginBottom="@dimen/dimen_xxx_large"
+        android:layout_marginEnd="@dimen/dimen_xxx_large"
+        android:layout_marginBottom="40dp"
         android:contentDescription="@string/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

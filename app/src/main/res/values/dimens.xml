@@ -30,4 +30,7 @@
     <dimen name="floating_add_button_width">48dp</dimen>
     <dimen name="floating_add_button_height">48dp</dimen>
 
+    <dimen name="standard_icon_width">20dp</dimen>
+    <dimen name="standard_icon_height">20dp</dimen>
+
 </resources>
