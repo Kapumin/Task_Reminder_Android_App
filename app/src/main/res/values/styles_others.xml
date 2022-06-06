@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyCustomCheckBoxStyle">
+        <item name="android:layout_width">14dp</item>
+        <item name="android:layout_height">14dp</item>
+        <item name="android:background">@drawable/bg_unchecked_checkbox</item>
+    </style>
+
+    <style name="FloatingCircleButtonStyle">
+        <item name="android:layout_width">@dimen/floating_add_button_width</item>
+        <item name="android:layout_height">@dimen/floating_add_button_height</item>
+        <item name="android:background">@drawable/circle_selector</item>
+        <item name="android:src">@drawable/ic_add_rounded_24</item>
+        <item name="android:tint">@color/secondary_color</item>
+        <item name="android:padding">@dimen/dimen_medium_large</item>
+    </style>
+
+</resources>
