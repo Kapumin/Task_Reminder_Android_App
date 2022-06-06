@@ -9,11 +9,8 @@ import com.google.android.material.R.anim.abc_fade_out
 import com.paizuri.taskreminder.common.base_classes.BaseActivity
 import com.paizuri.taskreminder.databinding.ActivityTaskEditorBinding
 import com.paizuri.taskreminder.common.entities.Task
-import com.paizuri.taskreminder.common.helpers.DEFAULT_TASK_TITLE
-import com.paizuri.taskreminder.common.helpers.IS_EDIT_TASK
+import com.paizuri.taskreminder.common.helpers.*
 import com.paizuri.taskreminder.extensions.setOnClick
-import com.paizuri.taskreminder.common.helpers.TASK_DESCRIPTION
-import com.paizuri.taskreminder.common.helpers.TASK_TITLE
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -22,6 +19,7 @@ class TaskEditorActivity : BaseActivity() {
     private val viewModel: TaskEditorViewModel by viewModels()
 
     private lateinit var binding: ActivityTaskEditorBinding
+    private lateinit var editTask: Task
     private var isEditTask: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,14 +34,15 @@ class TaskEditorActivity : BaseActivity() {
         intent?.let { intent ->
             isEditTask = intent.getBooleanExtra(IS_EDIT_TASK, false)
             if (isEditTask) {
+                editTask = intent.getSerializableExtra(EDIT_TASK) as Task
                 prepareLayoutForEdit()
             }
         }
     }
 
     private fun prepareLayoutForEdit() {
-        binding.etTaskTitle.setText(clickedTask.taskTitle)
-        binding.etTaskDescription.setText(clickedTask.taskDescription)
+        binding.etTaskTitle.setText(editTask.taskTitle)
+        binding.etTaskDescription.setText(editTask.taskDescription)
     }
 
     private fun setClickListeners() {
@@ -64,9 +63,9 @@ class TaskEditorActivity : BaseActivity() {
                         if (isEditTask.not()) {
                             viewModel.insertTask(Task(null, taskTitle = title, taskDescription = description))
                         } else {
-                            clickedTask.taskTitle = title
-                            clickedTask.taskDescription = description
-                            viewModel.updateTask(clickedTask)
+                            editTask.taskTitle = title
+                            editTask.taskDescription = description
+                            viewModel.updateTask(editTask)
                         }
                         super.onBackPressed()
                     }
@@ -107,12 +106,6 @@ class TaskEditorActivity : BaseActivity() {
 
     companion object {
 
-        private lateinit var clickedTask: Task
-
-        fun clickedTask(task: Task) {
-            this.clickedTask = task
-        }
-
         fun start(activity: Activity, isEditTask: Boolean = false) {
             activity.apply {
                 startActivity(Intent(activity, TaskEditorActivity::class.java).apply {
@@ -122,10 +115,10 @@ class TaskEditorActivity : BaseActivity() {
             }
         }
 
-        //todo use this for editTask
-        fun startActivityForEdit(activity: Activity, isEditTask: Boolean = false) {
+        fun startActivityForEdit(activity: Activity, isEditTask: Boolean = false, task: Task) {
             activity.apply {
                 startActivity(Intent(activity, TaskEditorActivity::class.java).apply {
+                    this.putExtra(EDIT_TASK, task)
                     this.putExtra(IS_EDIT_TASK, isEditTask)
                 })
                 overridePendingTransition(abc_fade_in, abc_fade_out)

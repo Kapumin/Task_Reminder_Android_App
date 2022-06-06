@@ -6,7 +6,7 @@ import javax.inject.Inject
 
 class TaskRepository @Inject constructor(private val taskDao: TaskDao) {
 
-    fun getAllTasks(): List<Task> = taskDao.getAllTasks()
+    fun getAllTasks(): MutableList<Task> = taskDao.getAllTasks()
 
     fun insertTask(task: Task) = taskDao.insertTask(task)
 

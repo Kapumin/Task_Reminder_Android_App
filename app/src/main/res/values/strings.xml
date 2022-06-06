@@ -7,4 +7,9 @@
     <string name="enter_task_details">Enter Task Details</string>
     <string name="back">Back</string>
     <string name="save_task">Save Task</string>
+    <string name="checkbox">Checkbox</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="check_task_as_done">Check task as Done ?</string>
+    <string name="delete_task">Delete Task</string>
 </resources>

@@ -2,10 +2,12 @@ package com.paizuri.taskreminder.home
 
 import android.os.Bundle
 import androidx.activity.viewModels
+import com.paizuri.taskreminder.R
 import com.paizuri.taskreminder.common.adapters.HomeTaskListAdapter
 import com.paizuri.taskreminder.common.base_classes.BaseActivity
 import com.paizuri.taskreminder.common.entities.Task
 import com.paizuri.taskreminder.common.extensions.showToast
+import com.paizuri.taskreminder.common.helpers.DialogManager
 import com.paizuri.taskreminder.databinding.ActivityHomeBinding
 import com.paizuri.taskreminder.extensions.setOnClick
 import com.paizuri.taskreminder.task_editor.TaskEditorActivity
@@ -46,10 +48,13 @@ class HomeActivity : BaseActivity(), HomeTaskListAdapter.TaskClickListener {
     }
 
     private fun setupRecyclerView() {
-        adapter = HomeTaskListAdapter()
-        adapter.updateDataset(mutableListOf())
-        adapter.setItemClickListener(this)
-        binding.rvTaskList.adapter = adapter
+        if (::adapter.isInitialized.not()) {
+            adapter = HomeTaskListAdapter().apply {
+                updateDataset(mutableListOf())
+                setItemClickListener(this@HomeActivity)
+                binding.rvTaskList.adapter = this
+            }
+        }
     }
 
     private fun setClickListeners() {
@@ -64,7 +69,13 @@ class HomeActivity : BaseActivity(), HomeTaskListAdapter.TaskClickListener {
     }
 
     override fun onTaskClicked(task: Task) {
-        TaskEditorActivity.start(this, true)
-        TaskEditorActivity.clickedTask(task)
+        TaskEditorActivity.startActivityForEdit(this, true, task)
+    }
+
+    override fun onTaskChecked(task: Task, taskPosition: Int) {
+        DialogManager.createDialog(this, getString(R.string.check_task_as_done), onPositiveButtonClicked = {
+            homeActivityViewModel.deleteTask(task)
+            adapter.removeTaskFromDataset(task, taskPosition)
+        })
     }
 }

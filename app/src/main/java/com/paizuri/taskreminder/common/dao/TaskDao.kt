@@ -7,7 +7,7 @@ import com.paizuri.taskreminder.common.entities.Task
 interface TaskDao {
 
     @Query("SELECT * from tasks")
-    fun getAllTasks(): List<Task>
+    fun getAllTasks(): MutableList<Task>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertTask(task: Task)

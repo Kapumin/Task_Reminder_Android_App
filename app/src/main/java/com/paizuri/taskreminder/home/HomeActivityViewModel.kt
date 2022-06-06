@@ -12,7 +12,7 @@ import javax.inject.Inject
 class HomeActivityViewModel @Inject constructor(private val taskRepository: TaskRepository, dispatcherProvider: DispatcherProvider) :
     BaseViewModel(dispatcherProvider) {
 
-    var tasksList: MutableLiveData<List<Task>> = MutableLiveData()
+    var tasksList: MutableLiveData<MutableList<Task>> = MutableLiveData()
 
     fun getAllTasks() {
         runBackground {

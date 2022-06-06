@@ -16,27 +16,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/et_search_task"
+        style="@style/SearchEditTextStyle"
+        android:layout_marginStart="@dimen/dimen_x_large"
+        android:layout_marginTop="@dimen/dimen_xxx_large"
+        android:layout_marginEnd="@dimen/dimen_xxx_large"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/dimen_small"
+        app:layout_constraintEnd_toStartOf="@id/iv_settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_greeting"
+        tools:ignore="Autofill,LabelFor" />
+
     <ImageView
         android:id="@+id/iv_settings"
         style="@style/IconPrimaryStyle"
         android:layout_marginEnd="@dimen/dimen_x_large"
         android:contentDescription="@string/settings"
         android:src="@drawable/ic_setting_24"
-        app:layout_constraintBottom_toBottomOf="@id/tv_greeting"
+        app:layout_constraintBottom_toBottomOf="@id/et_search_task"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv_greeting" />
+        app:layout_constraintTop_toTopOf="@+id/et_search_task" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_task_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dimen_medium_large"
         android:layout_marginTop="@dimen/dimen_xxx_large"
+        android:layout_marginEnd="@dimen/dimen_medium_large"
         android:layout_marginBottom="@dimen/dimen_medium"
         android:orientation="vertical"
         android:overScrollMode="never"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
+        app:layout_constraintTop_toBottomOf="@+id/et_search_task"
+        app:spanCount="2"
+        tools:listitem="@layout/item_task" />
 
     <ImageView
         android:id="@+id/iv_add_task"
