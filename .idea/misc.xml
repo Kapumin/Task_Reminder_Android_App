@@ -3,16 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.12579564489112227" />
         <entry key="..\:/Users/abhij/AndroidStudioProjects/Task_Reminder_Android_App/app/src/main/res/drawable/ic_add_24.xml" value="0.1" />
         <entry key="..\:/Users/abhij/AndroidStudioProjects/Task_Reminder_Android_App/app/src/main/res/drawable/ic_setting_24.xml" value="0.1" />
         <entry key="..\:/Users/abhij/AndroidStudioProjects/Task_Reminder_Android_App/app/src/main/res/layout/activity_home.xml" value="0.2222222222222222" />
+        <entry key="app/src/main/res/drawable/bg_checkbox.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/bg_checked_checkbox.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/checkbox.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/circle_accent_bg.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/circle_selected.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/custom_checkbox.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/dialog_bg.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/edit_text_cursor.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/edit_text_rounded_rect_bg.xml" value="0.139" />
+        <entry key="app/src/main/res/drawable/item_task_bg.xml" value="0.139" />
         <entry key="app/src/main/res/drawable/round_selector.xml" value="0.139" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.2908888075086807" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.359375" />
-        <entry key="app/src/main/res/layout/activity_task_editor.xml" value="0.38560791015625" />
+        <entry key="app/src/main/res/layout/activity_task_editor.xml" value="0.23063507080078127" />
+        <entry key="app/src/main/res/layout/base_dialog_layout.xml" value="0.34102630615234375" />
+        <entry key="app/src/main/res/layout/item_task.xml" value="0.26522464328342016" />
       </map>
     </option>
   </component>

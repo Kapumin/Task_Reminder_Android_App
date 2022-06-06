@@ -1,15 +1,15 @@
 package com.paizuri.taskreminder.dao
 
 import androidx.room.*
-import com.paizuri.taskreminder.entities.Task
+import com.paizuri.taskreminder.common.entities.Task
 
 @Dao
 interface TaskDao {
 
     @Query("SELECT * from tasks")
-    fun getAllTasks(): List<Task>
+    fun getAllTasks(): MutableList<Task>
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertTask(task: Task)
 
     @Update

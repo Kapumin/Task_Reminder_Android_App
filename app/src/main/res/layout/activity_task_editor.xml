@@ -6,21 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".task_editor.TaskEditorActivity">
 
+    <ImageView
+        android:id="@+id/iv_back"
+        style="@style/IconPrimaryStyle"
+        android:layout_marginStart="@dimen/dimen_x_large"
+        android:layout_marginTop="@dimen/dimen_xxx_large"
+        android:contentDescription="@string/back"
+        android:src="@drawable/ic_round_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_save_task"
+        style="@style/TitleSecondaryStyle"
+        android:layout_marginEnd="@dimen/dimen_x_large"
+        android:text="@string/save_task"
+        android:textColor="@color/accent_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+
     <TextView
         android:id="@+id/tv_task_title"
         style="@style/TextSecondaryStyle"
-        android:layout_marginStart="@dimen/dimen_medium"
-        android:layout_marginTop="@dimen/dimen_x_large"
+        android:layout_marginStart="@dimen/dimen_x_large"
+        android:layout_marginTop="@dimen/dimen_xxx_large"
         android:text="@string/title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/iv_back" />
 
     <EditText
         android:id="@+id/et_task_title"
         style="@style/TaskEditTextStyle"
-        android:layout_marginStart="@dimen/dimen_medium"
+        android:layout_marginStart="@dimen/dimen_x_large"
         android:layout_marginTop="@dimen/dimen_medium"
-        android:layout_marginEnd="@dimen/dimen_medium"
+        android:layout_marginEnd="@dimen/dimen_x_large"
+        android:imeOptions="actionNext"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,18 +53,18 @@
     <TextView
         android:id="@+id/tv_task_description"
         style="@style/TextSecondaryStyle"
-        android:layout_marginStart="@dimen/dimen_medium"
-        android:layout_marginTop="@dimen/dimen_x_large"
+        android:layout_marginStart="@dimen/dimen_x_large"
+        android:layout_marginTop="@dimen/dimen_xxx_large"
         android:text="@string/enter_task_details"
-        app:layout_constraintTop_toBottomOf="@+id/et_task_title"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_task_title" />
 
     <EditText
         android:id="@+id/et_task_description"
         style="@style/TaskEditTextStyle"
-        android:layout_marginStart="@dimen/dimen_medium"
+        android:layout_marginStart="@dimen/dimen_x_large"
         android:layout_marginTop="@dimen/dimen_medium"
-        android:layout_marginEnd="@dimen/dimen_medium"
+        android:layout_marginEnd="@dimen/dimen_x_large"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

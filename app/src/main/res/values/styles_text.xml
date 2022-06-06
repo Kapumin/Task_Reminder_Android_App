@@ -2,7 +2,7 @@
 <resources>
 
     <style name="TextPrimaryStyle">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/primary_text_color</item>
         <item name="android:textSize">@dimen/text_size_primary</item>
@@ -10,7 +10,7 @@
     </style>
 
     <style name="TextSecondaryStyle">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/secondary_text_color</item>
         <item name="android:textSize">@dimen/text_size_secondary</item>
@@ -27,7 +27,7 @@
     </style>
 
     <style name="TitleSecondaryStyle">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/secondary_title_color</item>
         <item name="android:textSize">@dimen/text_size_secondary</item>
@@ -37,9 +37,24 @@
     <style name="TaskEditTextStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textCursorDrawable">@drawable/edit_text_cursor</item>
         <item name="android:textColor">@color/primary_text_color</item>
         <item name="android:background">@drawable/edit_text_rounded_rect_bg</item>
         <item name="android:padding">@dimen/dimen_small</item>
     </style>
 
+    <style name="SearchEditTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/search_edit_text_height</item>
+        <item name="android:maxLines">@integer/search_edit_text_max_lines</item>
+        <item name="android:hint">Search your task here...</item>
+        <item name="android:textCursorDrawable">@drawable/edit_text_cursor</item>
+        <item name="android:textSize">@dimen/text_size_primary</item>
+        <item name="android:textColorHint">@color/edit_text_color_hint</item>
+        <item name="android:textColor">@color/primary_text_color</item>
+        <item name="android:drawableEnd">@drawable/ic_search_rounded_24</item>
+        <item name="drawableTint">@color/edit_text_color_hint</item>
+        <item name="android:background">@drawable/edit_text_rounded_rect_bg</item>
+        <item name="android:padding">@dimen/dimen_medium_x_large</item>
+    </style>
 </resources>

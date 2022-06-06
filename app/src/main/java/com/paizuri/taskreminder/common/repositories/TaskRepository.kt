@@ -1,12 +1,12 @@
-package com.paizuri.taskreminder.repositories
+package com.paizuri.taskreminder.common.repositories
 
 import com.paizuri.taskreminder.dao.TaskDao
-import com.paizuri.taskreminder.entities.Task
+import com.paizuri.taskreminder.common.entities.Task
 import javax.inject.Inject
 
 class TaskRepository @Inject constructor(private val taskDao: TaskDao) {
 
-    fun getAllTasks(): List<Task> = taskDao.getAllTasks()
+    fun getAllTasks(): MutableList<Task> = taskDao.getAllTasks()
 
     fun insertTask(task: Task) = taskDao.insertTask(task)
 

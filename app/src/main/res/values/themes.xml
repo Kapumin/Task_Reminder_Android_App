@@ -10,7 +10,10 @@
         <item name="colorOnSecondary">@color/secondary_on_color</item>
 
         <item name="android:statusBarColor">@color/status_bar_color</item>
-        <item name="android:windowBackground">@color/window_color</item>
+        <item name="android:windowBackground">@color/window_background_color</item>
         <item name="android:navigationBarColor">@color/navigation_bar_color</item>
+
+        <item name="android:colorAccent">@color/accent_color</item>
+
     </style>
 </resources>
