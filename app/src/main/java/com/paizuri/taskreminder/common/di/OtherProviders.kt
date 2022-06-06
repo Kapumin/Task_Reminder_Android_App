@@ -13,5 +13,4 @@ class OtherProviders {
 
     @Provides
     fun provideDispatchProvider(): DispatcherProvider = DispatcherProverImpl()
-
 }

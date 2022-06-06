@@ -10,7 +10,7 @@ import com.paizuri.taskreminder.common.base_classes.BaseActivity
 import com.paizuri.taskreminder.databinding.ActivityTaskEditorBinding
 import com.paizuri.taskreminder.common.entities.Task
 import com.paizuri.taskreminder.common.helpers.*
-import com.paizuri.taskreminder.extensions.setOnClick
+import com.paizuri.taskreminder.common.extensions.setOnClick
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

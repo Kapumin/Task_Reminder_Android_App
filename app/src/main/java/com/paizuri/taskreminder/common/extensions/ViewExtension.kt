@@ -1,4 +1,4 @@
-package com.paizuri.taskreminder.extensions
+package com.paizuri.taskreminder.common.extensions
 
 import android.view.View
 

@@ -20,7 +20,6 @@ class HomeActivityViewModel @Inject constructor(private val taskRepository: Task
         }
     }
 
-
     fun deleteTask(task: Task) {
         runBackground {
             taskRepository.deleteTask(task)

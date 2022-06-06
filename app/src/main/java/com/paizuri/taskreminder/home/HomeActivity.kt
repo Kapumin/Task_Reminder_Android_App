@@ -9,7 +9,7 @@ import com.paizuri.taskreminder.common.entities.Task
 import com.paizuri.taskreminder.common.extensions.showToast
 import com.paizuri.taskreminder.common.helpers.DialogManager
 import com.paizuri.taskreminder.databinding.ActivityHomeBinding
-import com.paizuri.taskreminder.extensions.setOnClick
+import com.paizuri.taskreminder.common.extensions.setOnClick
 import com.paizuri.taskreminder.task_editor.TaskEditorActivity
 import dagger.hilt.android.AndroidEntryPoint
 

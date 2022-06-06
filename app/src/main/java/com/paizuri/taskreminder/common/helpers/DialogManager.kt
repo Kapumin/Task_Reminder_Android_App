@@ -5,7 +5,7 @@ import android.view.Window
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.paizuri.taskreminder.R
-import com.paizuri.taskreminder.extensions.setOnClick
+import com.paizuri.taskreminder.common.extensions.setOnClick
 
 class DialogManager {
 

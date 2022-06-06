@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.paizuri.taskreminder.common.entities.Task
 import com.paizuri.taskreminder.databinding.ItemTaskBinding
-import com.paizuri.taskreminder.extensions.setOnClick
+import com.paizuri.taskreminder.common.extensions.setOnClick
 
 class HomeTaskListAdapter : RecyclerView.Adapter<HomeTaskListAdapter.TaskViewHolder>() {
 
